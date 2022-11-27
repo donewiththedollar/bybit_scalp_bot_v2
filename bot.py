@@ -106,6 +106,8 @@ what_1x_is = round((float(equity) / float(ask)) / (100 / float(leverage)),2)
 print('        1x size:',what_1x_is)
 print('        0.1x is:',what_1x_is/10)
 print('          0.01x:',what_1x_is/100)
+print('         0.005x:',what_1x_is/500)
+print('         0.001x:',what_1x_is/1000)
 
 min_lot_size = input('What size to trade? ')
 
