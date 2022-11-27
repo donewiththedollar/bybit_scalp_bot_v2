@@ -109,8 +109,20 @@ print('          0.01x:',what_1x_is/100)
 print('         0.005x:',what_1x_is/500)
 print('         0.001x:',what_1x_is/1000)
 
-min_lot_size = input('What size to trade? ')
+# Function from krishna3114
+# Verify that input size to trade is greater than minimum trading quantity for symbol
+def trade_size():
+    global min_lot_size
+    min_lot_size=float(input("What size to trade: "))
+    while (not isinstance(min_lot_size, float)):
+        print('ERROR: Input needs to be number')
+        min_lot_size=input("What size to trade: ")
+        while ( float(min_lot_size) < min_trading_qty ):
+            print('ERROR: Min lot size for',symbol,'is:',min_trading_qty)
+            min_lot_size=float(input("What size to trade: "))
+    return min_lot_size
 
+trade_size()
 
 started = datetime.datetime.now().strftime('%H:%M:%S')
 
