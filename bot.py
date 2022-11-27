@@ -434,7 +434,8 @@ while True:
 
 
     what_1x_is = round((float(equity) / float(ask)) / (100 / float(leverage)),2)
-    max_size = what_1x_is
+    #max_size = what_1x_is
+    max_size = config_max_size
 
 
     print('╭─────────────────────────────────────────────╮')

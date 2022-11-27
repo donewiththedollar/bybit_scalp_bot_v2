@@ -8,3 +8,4 @@ binance_api_secret = ''
 
 endpoint = 'https://api.bybit.com'
 domain = 'bybit'
+config_max_size = 20000
